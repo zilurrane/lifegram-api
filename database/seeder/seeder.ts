@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const readlineSync = require("readline-sync");
 require("dotenv/config");
 const User = require("../../src/models/user.model.ts");
-const userData = require("./user.json");
+const userData = require("./users.json");
 
 console.log("START : MongoDB Seeder....");
 console.log("This will insert seed data into your database.");
