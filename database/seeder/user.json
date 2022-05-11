@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "627bdfaad384a173a7079958",
+        "phoneNumber": "+918888888888",
+        "emailId": "test1@gmail.com",
+        "firstName": "FN",
+        "lastName": "LN",
+        "userName": "test1",
+        "displayName": "test One",
+        "isActive": true
+    },
+    {
+        "_id": "627bdfaad384a173a707995a",
+        "phoneNumber": "+917777777777",
+        "emailId": "test2@gmail.com",
+        "firstName": "FN2",
+        "lastName": "LN2",
+        "userName": "test2",
+        "displayName": "test Two",
+        "isActive": true
+    }
+]

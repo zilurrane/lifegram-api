@@ -4,7 +4,7 @@ import { Audit } from '../interfaces/audit.interface';
 const Schema = mongoose.Schema;
 
 export interface UserData extends Audit {
-    userId: Object;
+    id?: any;
     phoneNumber: string;
     emailId: string;
     firstName: string;
@@ -21,7 +21,6 @@ export interface UserDocument extends mongoose.Document, UserData {
 }
 
 export const UserSchema = new Schema({
-    userId: { type: Schema.Types.ObjectId, unique: true, required: true },
     phoneNumber: { type: String },
     emailId: { type: String },
     firstName: { type: String },
