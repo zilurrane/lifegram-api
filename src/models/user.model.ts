@@ -12,6 +12,7 @@ export interface UserData extends Audit {
     userName: string;
     displayName: string;
     isActive: boolean;
+    isVerified: boolean;
 }
 
 export interface UserModel extends mongoose.Model<UserDocument> {
@@ -21,13 +22,14 @@ export interface UserDocument extends mongoose.Document, UserData {
 }
 
 export const UserSchema = new Schema({
-    phoneNumber: { type: String },
-    emailId: { type: String },
+    phoneNumber: { type: String, unique: true },
+    emailId: { type: String, unique: true },
     firstName: { type: String },
     lastName: { type: String },
-    userName: { type: String },
+    userName: { type: String, unique: true },
     displayName: { type: String },
-    isActive: { type: Boolean, default: true },
+    isActive: { type: Boolean, default: false },
+    isVerified: { type: Boolean, default: false },
     createdOn: { type: Date, default: Date.now },
     createdBy: { type: Schema.Types.ObjectId, ref: 'Users' },
     modifiedOn: { type: Date, default: Date.now },
