@@ -5,7 +5,6 @@
         "emailId": "test1@gmail.com",
         "firstName": "FN",
         "lastName": "LN",
-        "userName": "test1",
         "displayName": "test One",
         "isActive": true
     },
@@ -15,7 +14,6 @@
         "emailId": "test2@gmail.com",
         "firstName": "FN2",
         "lastName": "LN2",
-        "userName": "test2",
         "displayName": "test Two",
         "isActive": true
     }

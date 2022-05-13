@@ -9,7 +9,6 @@ export interface UserData extends Audit {
     emailId: string;
     firstName: string;
     lastName: string;
-    userName: string;
     displayName: string;
     isActive: boolean;
     isVerified: boolean;
@@ -23,10 +22,9 @@ export interface UserDocument extends mongoose.Document, UserData {
 
 export const UserSchema = new Schema({
     phoneNumber: { type: String, unique: true },
-    emailId: { type: String, unique: true },
+    emailId: { type: String },
     firstName: { type: String },
     lastName: { type: String },
-    userName: { type: String, unique: true },
     displayName: { type: String },
     isActive: { type: Boolean, default: false },
     isVerified: { type: Boolean, default: false },
