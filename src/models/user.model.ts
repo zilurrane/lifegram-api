@@ -6,10 +6,10 @@ const Schema = mongoose.Schema;
 export interface UserData extends Audit {
     id?: any;
     phoneNumber: string;
-    emailId: string;
-    firstName: string;
-    lastName: string;
-    displayName: string;
+    emailId?: string;
+    firstName?: string;
+    lastName?: string;
+    displayName?: string;
     isActive: boolean;
     isVerified: boolean;
 }
