@@ -19,7 +19,7 @@ export interface UserOTPDocument extends mongoose.Document, UserOTPData {
 
 export const UserOTPSchema = new Schema({
     userId: { type: Schema.Types.ObjectId, ref: 'Users' },
-    otp: { type: String, unique: true },
+    otp: { type: String },
     expiry: { type: Date, default: Date.now },
     status: { type: String },
     createdOn: { type: Date, default: Date.now },
