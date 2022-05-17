@@ -3,6 +3,7 @@ import healthCheckRouter from './routes/health-check.route';
 import cors from 'cors';
 import authRouter from './routes/auth.route';
 import { errorHandler } from './shared/middlewares/error-handler';
+import postRouter from './routes/post.route';
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(urlencoded({ extended: false }));
 
 app.use("/healthcheck", healthCheckRouter);
 app.use("/auth", authRouter);
+app.use("/posts", postRouter);
 
 app.use(errorHandler);
 
